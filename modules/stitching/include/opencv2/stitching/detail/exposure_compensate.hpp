@@ -186,9 +186,8 @@ public:
     CV_WRAP int getNrGainsFilteringIterations() const { return nr_gain_filtering_iterations_; }
 
 protected:
-    template<class Compensator>
     void feed(const std::vector<Point> &corners, const std::vector<UMat> &images,
-              const std::vector<std::pair<UMat,uchar> > &masks);
+              const std::vector<std::pair<UMat,uchar> > &masks) CV_OVERRIDE;
 
 private:
     UMat getGainMap(const GainCompensator& compensator, int bl_idx, Size bl_per_img);

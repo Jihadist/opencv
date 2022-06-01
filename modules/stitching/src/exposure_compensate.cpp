@@ -459,7 +459,6 @@ void ChannelsCompensator::setMatGains(std::vector<Mat>& umv)
 }
 
 
-template<class Compensator>
 void BlocksCompensator::feed(const std::vector<Point> &corners, const std::vector<UMat> &images,
                              const std::vector<std::pair<UMat,uchar> > &masks)
 {
